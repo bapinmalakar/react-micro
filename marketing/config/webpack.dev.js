@@ -1,5 +1,4 @@
 const { merge } = require('webpack-merge');
-const HTMLwebpackPlugin = require('html-webpack-plugin');
 const moDULEfedarationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
 const commonConfig = require('./webpack.common');
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
@@ -22,9 +21,6 @@ const devConfig = {
                 './MarketingApp': './src/bootstrap'
             },
             shared: packageJson.dependencies
-        }),
-        new HTMLwebpackPlugin({
-            template: './public/index.html'
         })
     ]
 }
